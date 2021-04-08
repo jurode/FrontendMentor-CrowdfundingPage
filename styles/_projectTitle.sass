@@ -1,0 +1,77 @@
+@import variables
+
+// == //////////////
+// == projectTITLE
+// == //////////////
+
+.projectTitle
+    text-align: center
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: 0px repeat(3, auto)
+    justify-content: center
+    h1, p
+        padding: 2vh 1vw
+    h1
+        margin-bottom: 0
+    p
+        margin-top: 0
+    div
+        display: grid
+        grid-template-columns: 70% 30%
+        button:first-of-type
+            grid-column: 1
+        button:last-of-type
+            grid-column: 2
+
+.logoProject
+    margin: 0 auto
+    position: relative
+    top: -50px
+
+#bookmark
+    background-color: transparent
+    padding: 0
+    span
+        display: none
+        color: black
+        line-height: 35px
+    object
+        fill: red
+
+// == //////////////
+// == MEDIA QUERIES
+// == //////////////
+
+@media screen and ( min-width: 481px )
+
+    .projectTitle
+        text-align: center
+        h1, p
+            padding: 2vh 1vw
+        div
+            grid-template-columns: 50% 50%
+        button
+            width: 70%
+            &:first-of-type
+                justify-self: start
+            &:last-of-type
+                justify-self: end
+
+    #bookmark
+        display: flex
+        justify-content: center
+        align-content: center
+        border-top-right-radius: 50px
+        border-bottom-right-radius: 50px
+        object
+            width: 60px
+            padding-top: 2px
+        span
+            display: block
+            padding: 1.5vw
+    .bookmark
+        background-color: rgba($colorNeutralMod, 0.1) !important
+        
+    .bookmarked
+        background-color: rgba($colorPrimaryMod, 0.5) !important

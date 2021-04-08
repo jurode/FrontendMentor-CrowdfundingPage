@@ -1,0 +1,64 @@
+/* this stylesheet is made in .sass */
+
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap')
+
+@import variables
+@import header
+@import projectTitle
+@import projectNumbers
+@import rewardBox
+@import modal
+
+
+
+// == Basics
+
+body
+    margin: 0
+    padding: 0
+    font-family: 'Commissioner', sans-serif
+
+div, p, button
+    color: $colorText
+    // font-size: 16pt
+
+// == BODY & MAIN
+
+body
+    background-color: $colorBackground
+
+main
+    width: 90%
+    margin: 0 auto
+    position: relative
+    top: -140px     // TODO responsive
+
+section
+    background-color: #fff
+    margin-top: 2vh
+    padding: 2vh 5vw
+
+h1, h2, h3, h4, h5, h6
+    color: #000
+
+button
+    background-color: $colorPrimaryMod
+    color: #fff
+    padding: 15px
+    border: none
+    border-radius: 75px 
+    &:hover
+        background-color: $colorPrimaryDark
+
+p
+    line-height: 24px
+
+
+
+////////////////
+// == MEDIA QUERIES
+////////////////
+
+@media screen and ( min-width: 481px  )
+    main
+        width: 60%

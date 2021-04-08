@@ -1,0 +1,597 @@
+/* this stylesheet is made in .sass */
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+header {
+  background-image: url("/images/image-hero-mobile.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 30%;
+      grid-template-columns: 60% 30%;
+  padding-top: 5vh;
+}
+
+header h1 {
+  margin-top: 0;
+}
+
+header div {
+  text-align: end;
+}
+
+#navOpen, #navClose {
+  display: block;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  padding-top: 7px;
+  width: 20%;
+  z-index: 1;
+  color: white;
+}
+
+#navClose {
+  display: none;
+}
+
+.logo {
+  color: #fff;
+  width: 50%;
+  padding-left: 7vw;
+}
+
+nav li {
+  list-style: none;
+  padding: 1.2em;
+  background-color: white;
+  width: 80%;
+  margin: auto;
+}
+
+nav li:first-of-type {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+nav li:last-of-type {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  padding-top: 100px;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 481px) {
+  header {
+    background-image: url("/images/image-hero-desktop.jpg");
+    background-size: 100%;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 28vw;
+    color: #fff;
+  }
+  header object {
+    display: none;
+  }
+  header #navOpen, header #navClose {
+    display: none;
+  }
+  nav ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (30%)[3];
+        grid-template-columns: repeat(3, 30%);
+    position: inherit;
+    z-index: 1;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  nav ul li {
+    list-style: none;
+    float: left;
+    padding-right: 3vw;
+    padding: 1.2em;
+    background-color: transparent;
+    width: 80%;
+    margin: auto;
+  }
+  nav ul li:first-of-type {
+    border-top-right-radius: none;
+    border-top-left-radius: none;
+  }
+  nav ul li:last-of-type {
+    border-bottom-right-radius: none;
+    border-bottom-left-radius: none;
+  }
+  nav ul a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.projectTitle {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 0px (auto)[3];
+      grid-template-rows: 0px repeat(3, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectTitle h1, .projectTitle p {
+  padding: 2vh 1vw;
+}
+
+.projectTitle h1 {
+  margin-bottom: 0;
+}
+
+.projectTitle p {
+  margin-top: 0;
+}
+
+.projectTitle div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+}
+
+.projectTitle div button:first-of-type {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.projectTitle div button:last-of-type {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.logoProject {
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+}
+
+#bookmark {
+  background-color: transparent;
+  padding: 0;
+}
+
+#bookmark span {
+  display: none;
+  color: black;
+  line-height: 35px;
+}
+
+#bookmark object {
+  fill: red;
+}
+
+@media screen and (min-width: 481px) {
+  .projectTitle {
+    text-align: center;
+  }
+  .projectTitle h1, .projectTitle p {
+    padding: 2vh 1vw;
+  }
+  .projectTitle div {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .projectTitle button {
+    width: 70%;
+  }
+  .projectTitle button:first-of-type {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .projectTitle button:last-of-type {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  #bookmark {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  #bookmark object {
+    width: 60px;
+    padding-top: 2px;
+  }
+  #bookmark span {
+    display: block;
+    padding: 1.5vw;
+  }
+  .bookmark {
+    background-color: rgba(122, 122, 122, 0.1) !important;
+  }
+  .bookmarked {
+    background-color: rgba(60, 180, 172, 0.5) !important;
+  }
+}
+
+.projectNumbers {
+  text-align: center;
+}
+
+.projectNumbers div:not(.number) {
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+}
+
+.projectNumbers hr {
+  background-color: #fafafa;
+  width: 25vw;
+  margin: auto;
+}
+
+.numberFat {
+  font-size: 200%;
+  font-weight: 600;
+  color: black;
+  margin-top: 2vh;
+}
+
+.barContainer {
+  background-color: #fafafa;
+  width: 90%;
+  height: 2vh;
+  margin: auto;
+  border-radius: 50px;
+}
+
+#bar {
+  background-color: #3cb4ac;
+  width: 89%;
+  height: 2vh;
+  border-radius: 50px;
+}
+
+.rewardBox {
+  width: 90%;
+  padding: 2vh 3vw;
+  border: 5px solid #fafafa;
+  border-radius: 7px;
+  margin: 2vh auto;
+}
+
+.rewardBox h3 {
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+}
+
+.rewardBox button {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.rewardHighlight {
+  color: #3cb4ac;
+  margin-bottom: 1.5em;
+}
+
+.rewardDescription {
+  margin-bottom: 1.5em;
+  line-height: 24px;
+}
+
+.rewardStock {
+  margin-bottom: 1.5em;
+}
+
+.rewardBoxInactive h3, .rewardBoxInactive div:not(.rewardHighlight), .rewardBoxInactive span {
+  color: #AFAFAF;
+}
+
+.rewardBoxInactive button {
+  background-color: #AFAFAF;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent, #success {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2em;
+  background-color: #fafafa;
+  border-radius: 10px;
+  margin: 100px auto;
+}
+
+.modalContent h2, #success h2 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  margin: 0;
+}
+
+.modalContent img, #success img {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.modalContent p, #success p {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  margin-bottom: 0;
+}
+
+.modalProjectBox {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 85%;
+      grid-template-columns: 15% 85%;
+  padding: 1em;
+  border: grey 1px solid;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+
+.modalProjectBox input {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.modalProjectBox label {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  color: black;
+  font-weight: bold;
+}
+
+.modalProjectBox span {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  color: #3cb4ac;
+}
+
+.modalProjectBox p {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+div.pledge {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  display: none;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  border-top: 1px solid grey;
+  margin-top: 2em;
+}
+
+div.pledge p {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-bottom: 0.7em;
+}
+
+div.pledge div {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  background-color: white;
+  color: #000;
+  padding: 12px;
+  border: 1px solid grey;
+  border-radius: 75px;
+  margin: 0;
+  margin-right: 7px;
+}
+
+div.pledge div input {
+  width: 30px;
+  border: none;
+}
+
+div.pledge button {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 12px;
+}
+
+div.modalProjectBox:first-of-type .pledge {
+  -ms-grid-columns: 0 100%;
+      grid-template-columns: 0 100%;
+  justify-items: center;
+  padding-top: 10px;
+}
+
+.pledgeActive {
+  border: 2px solid #3cb4ac !important;
+}
+
+#success {
+  display: none;
+  text-align: center;
+}
+
+#successContent {
+  margin: auto;
+}
+
+#successContent * {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#successContent button {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+@media screen and (min-width: 481px) {
+  .modalContent, #success {
+    width: 70%;
+  }
+  div.pledge {
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    border-top: 1px solid grey;
+    margin-top: 2em;
+  }
+  div.pledge p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-bottom: 0.7em;
+  }
+  div.pledge div {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    background-color: white;
+    color: #000;
+    padding: 12px;
+    border: 1px solid grey;
+    border-radius: 75px;
+    margin: 0;
+    margin-right: 7px;
+  }
+  div.pledge div input {
+    width: 30px;
+    border: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Commissioner', sans-serif;
+}
+
+div, p, button {
+  color: #7a7a7a;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: -140px;
+}
+
+section {
+  background-color: #fff;
+  margin-top: 2vh;
+  padding: 2vh 5vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+}
+
+button {
+  background-color: #3cb4ac;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 75px;
+}
+
+button:hover {
+  background-color: #147b74;
+}
+
+p {
+  line-height: 24px;
+}
+
+@media screen and (min-width: 481px) {
+  main {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
